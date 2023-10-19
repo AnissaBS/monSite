@@ -3,9 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styleGrid.css">
+    <title>Variables sur les dates</title>
 </head>
 <body>
+
+<?php
+    include_once('entete.php');
+?>
+    <div class="content">
+        <h1>Variables sur les dates</h1>
+
     <?php
         /* Pour manipuler les dates, on utilise un groupe date/heure aussi appelé times-stamp qui est issu de la notion UNIX.
         PHP utilise le fuseau horaire qui défini par défaut dans la rubrique [Date] du fichier php.ini. Ce fichier regroupe tous les paramètres de base. On peut ouvrir ce fichier avec n'importe quel éditeur.
@@ -45,7 +53,7 @@
                 n : Le numéro du mois sur un chiffre
                 y : L'année sur 2 chiffres
                 Y : L'année sur 4 chiffres
-                A : Le numéro du jour de la semaine (0 à 6 en commençant par le dimanche)
+                A : Le jour entier de la semaine en lettres
 
                 Il est à noter que pour afficher en format local, par exemple en français, il faut utiliser l'instruction "strftime avec les paramètres.
         */
@@ -102,8 +110,13 @@
         $dateTemps = date("Y-m-d H:i:s");
         echo"<br>Date actuelle : $dateTemps";
 
-
-
     ?>
+    
+    </div>
+    
+<?php
+    include_once('footer.php');
+?>
+
 </body>
 </html>
