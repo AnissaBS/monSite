@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* background-color: rgb(147, 147, 222); */
 }
 html, body {
     height: 100%;
@@ -28,7 +29,7 @@ nav a {
 
 .content {
     padding: 125px 50px 50px;
-    background: royalblue;
+    background: rgb(104, 122, 177);
 }
 
 h1 {
@@ -42,3 +43,4 @@ footer {
     font-size: 20px;
     text-align: center;
 }
+
