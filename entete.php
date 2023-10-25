@@ -39,6 +39,12 @@
         <li class="nav-item">
           <a class="nav-link" href="tableau.php">Tableaux</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fonction.php">Fonctions</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="form.php">Formulaires</a>
+        </li>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact.php">Contact</a>
