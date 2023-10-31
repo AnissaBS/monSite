@@ -34,7 +34,7 @@
     $data = $_POST['dt']; // POST
 */-->
 
-    <form action="action.php" method="get">
+    <form action="" method="get">
         NOM : <input type="text" name="nom"><br><br>
         Prénom : <input type="text" name="prenom" id=""><br><br>
         <input type="submit" name="" id="">

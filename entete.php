@@ -45,10 +45,13 @@
         <li class="nav-item">
           <a class="nav-link" href="form.php">Formulaires</a>
         </li>
-        </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact</a>
+          <a class="nav-link" href="objet.php">Programmation Objet</a>
         </li>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="contact.php">Contact</a>
+        </li> -->
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
