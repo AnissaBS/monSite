@@ -136,7 +136,123 @@
         echo "L'aire du carré est : ".$cote*$cote;
     }
     carre(5); // Ici, on appelle la fonction + l'argument entre parenthèses
+    echo "<br><br><br>";
 
+    /*
+        1) Les fonctions STATIQUES
+    Une variable statique déclarée à l'intérieur d'une fonction à l'aide de l'instruction static permet à celle-ci de garder sa valeur à chaque appel de la fonction. L'initialisation d'une vairbale static se fait au début de la fonction et à chaque appel de la fonction dans le script et elle gardera la valeur du dernier appel.
+    */
+        function stat_fonc(){
+            static $cpt = 0;
+            $cpt++;
+            echo $cpt;
+        }
+
+        echo "<br>Au premier affichage, cpt vaut : "; stat_fonc();
+        // doit afficher 2 car le premier appel initialise $cpt à 0 une seule fois et l'incrémente de 1
+        echo "<br>Au deuxième affichage, cpt vaut maintenant : "; stat_fonc();
+        echo "<br>Au troisième affichage, cpt vaut dorénavent : "; stat_fonc();
+        echo "<br><br><br>";
+
+    /*
+        1) Les fonctions AVANCEES
+    Il existe trois fonctions utilisées dans la gestion des arguments passés à une fonction dans PHP. Il s'agit de :
+    - func_get_arg : permet de lire un argument spécifique
+    - func_get_args : permet d'obtenir l'ensemble des arguments sous forme d'un tableau
+    - func_num_args : permet de connaître le nombre d'arguments reçu par la fonction
+    */
+        function gestion_arg1(){
+            $numargs = func_num_args();
+            echo "<u>gestion_arg1</u><br>";
+            echo "Nombre d'arguments de la fonction 1 : $numargs\n <br>";
+            // if($numargs >= 2){
+            //     echo "Le premier argument est : ".func_get_arg(0)."\n <br>";
+            //     echo "Le deuxième argument est : ".func_get_arg(1)."\n <br>";
+            //     echo "Le troisième argument est : ".func_get_arg(2)."\n <br>";
+            // }
+        }
+        gestion_arg1(89,654);
+
+        echo "<br><br>";
+
+        function gestion_arg2(){
+            $numargs = func_num_args();
+            echo "<u>gestion_arg2</u><br>";
+            echo "Nombre d'arguments de la fonction 2 : $numargs\n <br>";
+            if($numargs >= 2){
+                echo "Le premier argument est : ".func_get_arg(0)."\n <br>";
+                echo "Le deuxième argument est : ".func_get_arg(1)."\n <br>";
+                echo "Le troisième argument est : ".func_get_arg(2)."\n <br>";
+            }
+        }
+        gestion_arg2(25,250,1000);
+        echo "<br><br>";
+
+    /*
+        3) Les fonctions DYNAMIQUES
+    Vous pouvez vous trouver dans le cas où vous ne savez pas quelle fonction devra être appelée à un moment précis dans un script donné.
+    Pour cela, il suffit de placer dans une variable le nom d'une fonction, puis d'utiliser cette variable comme une fonction.
+    */
+         function ecrire($texte){
+            print($texte);
+         }
+         function ecrireEnGras($texte){
+            print("<b>$texte</b>");
+         }
+         $fonction_var = "ecrire";
+         $fonction_var ("toto") ; // Affiche toto
+         echo "<br/>";
+         $fonction_var = "ecrireEnGras";
+         $fonction_var ("toto");
+         echo "<br><br>";
+
+    /*
+        4) Les fonctions RECURSIVES
+    Le langage PHP supporte les fonctions récursives. Une fonction récursive est une fonction qui s'appelle elle-même.
+
+    Un exemple simple présentant le principe de la récursivité : affichage à l'envers d'une chaîne de caractères.
+    */
+        $str = "Hello World !";
+
+        reverse_r($str);
+        function reverse_r($str){
+            if(strlen($str) > 0){
+                // substr retourne le premier caractère
+                reverse_r(substr($str, 1)); // Appel récursif
+                echo "<br>";
+                echo substr($str, 0, 1); // Affiche un caractère
+                return;
+            }
+        }
+        echo "<br><br>";
+
+    /*
+    Les fonctions récursives sont principalement utilisées pour naviguer dans les structures de données dynamiques (liste et arbre).
+    Autrement, dans de nombreux cas, la récursivité est équivalente à une répétition (ou itération). Les fonctions récursives sont plus lentes et consomment plus de mémoire que les itérations.*/
+
+    $str_1 = "Hello world !";
+    reverse_r($str_1);
+    function reverse_r_1($str_1){
+        for($i=1; $i<=strlen($str_1); $i++){
+            echo substr($str_1, -$i, 1); // Affiche un caractère en partant de la fin
+        }
+        return;
+    }
+
+        // Test :
+
+        function FonctPrenom($prenom){
+            return $prenom;
+        }
+        FonctPrenom("Anissa");
+        $prenom = FonctPrenom("Anissa");
+
+        function nomComplet($nom, $prenom){
+            return $nom." ".$prenom;
+        }
+
+        echo nomComplet("Ben Saïd", $prenom);
+        
     ?>
 
     </div>
