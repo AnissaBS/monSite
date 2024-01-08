@@ -36,6 +36,7 @@
             <!-- <li><hr class="dropdown-divider"></li> -->
             <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
           </ul>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="tableau.php">Tableaux</a>
         </li>
@@ -46,12 +47,42 @@
           <a class="nav-link" href="form.php">Formulaires</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="objet.php">Programmation Objet</a>
+          <a class="nav-link" href="POO.php">Programmation Objet</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="inserD.php">Insertions</a>
         </li>
-        <!-- <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact</a>
-        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="mysqli.php">MySQLI</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="rechercher.php">Recherches</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="structControle.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Images</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="image.php">Image</a></li>
+            <li><a class="dropdown-item" href="imagePolygone.php">Image Polygone</a></li>
+            <li><a class="dropdown-item" href="imagerectangle.php">Image Rectangle</a></li>
+            <li><a class="dropdown-item" href="imageSinus.php">Image Sinus</a></li>
+            <li><a class="dropdown-item" href="imageTracer.php">Image Tracer</a></li>
+            <li><a class="dropdown-item" href="imagetriangle.php">Image Triangle</a></li>
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="API.php">API</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="structControle.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Multimédia</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="audio.php">Audio</a></li>
+            <li><a class="dropdown-item" href="video.php">Vidéo</a></li>
+          </ul>
+        </li>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search">
